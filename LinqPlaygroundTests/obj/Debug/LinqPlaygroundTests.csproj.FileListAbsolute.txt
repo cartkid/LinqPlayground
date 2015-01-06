@@ -1,0 +1,12 @@
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\obj\Debug\LinqPlaygroundTests.csprojResolveAssemblyReference.cache
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\bin\Debug\LinqPlaygroundTests.dll
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\bin\Debug\LinqPlaygroundTests.pdb
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\bin\Debug\EntityFramework.dll
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\bin\Debug\LinqPlayground.dll
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\bin\Debug\LinqPlayground.pdb
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\bin\Debug\EntityFramework.xml
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\obj\Debug\LinqPlaygroundTests.dll
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\obj\Debug\LinqPlaygroundTests.pdb
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\bin\Debug\LinqPlaygroundTests.dll.config
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\bin\Debug\EntityFramework.SqlServer.dll
+C:\VS\LinqPlayground\LinqPlayground\LinqPlaygroundTests\bin\Debug\EntityFramework.SqlServer.xml
