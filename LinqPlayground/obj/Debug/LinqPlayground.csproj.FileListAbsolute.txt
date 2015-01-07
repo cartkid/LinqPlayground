@@ -1,3 +1,4 @@
+C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\obj\Debug\LinqPlayground.pdb
 C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\bin\Debug\LinqPlayground.dll.config
 C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\bin\Debug\LinqPlayground.dll
 C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\bin\Debug\LinqPlayground.pdb
@@ -5,6 +6,5 @@ C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\bin\Debug\EntityFramework.dll
 C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\bin\Debug\EntityFramework.SqlServer.dll
 C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\bin\Debug\EntityFramework.xml
 C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\bin\Debug\EntityFramework.SqlServer.xml
-C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\obj\Debug\LinqPlayground.dll
-C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\obj\Debug\LinqPlayground.pdb
 C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\obj\Debug\LinqPlayground.csprojResolveAssemblyReference.cache
+C:\VS\LinqPlayground\LinqPlayground\LinqPlayground\obj\Debug\LinqPlayground.dll

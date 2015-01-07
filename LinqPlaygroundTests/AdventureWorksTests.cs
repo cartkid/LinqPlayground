@@ -25,18 +25,18 @@ namespace LinqPlaygroundTests
         }
 
         [TestMethod]
-        public void AreTherePeople()
+        public void GetPeople()
         {
-            List<Person> people = LinqPlayground.Queries.GetPeople();
-            int numPeople = people.Count;
+            IEnumerable<object> people = LinqPlayground.Queries.GetPeople(1);
+            int numPeople = people.Count();
             Assert.IsTrue(numPeople > 0);
         }
 
         [TestMethod]
         public void GetAllErics()
         {
-            List<Person> allErics = LinqPlayground.Queries.GetPeopleWithFirstName("Eric");
-            int actualCountErics = allErics.Count;
+            IEnumerable<object> allErics = LinqPlayground.Queries.GetPeopleWithFirstName("Eric");
+            int actualCountErics = allErics.Count();
             int expectedCountErics = 63;
             Assert.AreEqual(actualCountErics, expectedCountErics);
         }
@@ -44,8 +44,8 @@ namespace LinqPlaygroundTests
         [TestMethod]
         public void GetAllAlyssas()
         {
-            List<Person> allErics = LinqPlayground.Queries.GetPeopleWithFirstName("Alyssa");
-            int actualCountErics = allErics.Count;
+            IEnumerable<object> allErics = LinqPlayground.Queries.GetPeopleWithFirstName("Alyssa");
+            int actualCountErics = allErics.Count();
             int expectedCountErics = 67;
             Assert.AreEqual(actualCountErics, expectedCountErics);
         }
