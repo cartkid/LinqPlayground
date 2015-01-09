@@ -27,7 +27,8 @@ namespace LinqPlaygroundTests
         [TestMethod]
         public void GetPeople()
         {
-            IEnumerable<object> people = LinqPlayground.Queries.GetPeople(1);
+            long executionMilliseconds = 0L;
+            IEnumerable<object> people = LinqPlayground.Queries.GetPeople(out executionMilliseconds, 1);
             int numPeople = people.Count();
             Assert.IsTrue(numPeople > 0);
         }

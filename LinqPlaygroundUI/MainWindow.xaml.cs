@@ -45,6 +45,36 @@ namespace LinqPlaygroundUI
             ((MainWindow)d).dataGrid.ItemsSource = (IEnumerable<object>)e.NewValue;
         }
 
+        public IEnumerable<object> IEnumerableSourceData
+        {
+            get { return (IEnumerable<object>)GetValue(IEnumerableSourceDataProperty); }
+            set { SetValue(IEnumerableSourceDataProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for SourceData.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty IEnumerableSourceDataProperty =
+            DependencyProperty.Register("IEnumerableSourceData", typeof(IEnumerable<object>), typeof(MainWindow), new PropertyMetadata(new List<object>(), OnIEnumerableSourceDataPropertyChanged));
+
+        private static void OnIEnumerableSourceDataPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ((MainWindow)d).dgIEnumerable.ItemsSource = (IEnumerable<object>)e.NewValue;
+        }
+
+        public IEnumerable<object> IQueryableSourceData
+        {
+            get { return (IEnumerable<object>)GetValue(IQueryableSourceDataProperty); }
+            set { SetValue(IQueryableSourceDataProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for SourceData.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty IQueryableSourceDataProperty =
+            DependencyProperty.Register("IQueryableSourceData", typeof(IEnumerable<object>), typeof(MainWindow), new PropertyMetadata(new List<object>(), OnIQueryableSourceDataPropertyChanged));
+
+        private static void OnIQueryableSourceDataPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ((MainWindow)d).dgIQueryable.ItemsSource = (IEnumerable<object>)e.NewValue;
+        }
+
         private void executeAllNamesCount_Click(object sender, RoutedEventArgs e)
         {
             SourceData = new List<object>();
@@ -105,6 +135,24 @@ namespace LinqPlaygroundUI
         {
             SourceData = LinqPlayground.Queries.GetDuplicateNames();
             lblNumberOfRecords.Content = SourceData.Count();
+        }
+
+        private void btnIEnumerableExecuteQueries_Click(object sender, RoutedEventArgs e)
+        {
+            lblIEnumerableLoading.Visibility = System.Windows.Visibility.Visible;
+            long totalExecutionTime = 0L;
+            IEnumerableSourceData = LinqPlayground.IEnumerableQueries.GetIEnumerableExecutionResults(out totalExecutionTime);
+            lblIEnumerableExecutionTime.Content = totalExecutionTime;
+            lblIEnumerableLoading.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        private void btnIQueryableExecuteQueries_Click(object sender, RoutedEventArgs e)
+        {
+            lblIQueryableLoading.Visibility = System.Windows.Visibility.Visible;
+            long totalExecutionTime = 0L;
+            IQueryableSourceData = LinqPlayground.IQueryableQueries.GetIQueryableExecutionResults(out totalExecutionTime);
+            lblIQueryableExecutionTime.Content = totalExecutionTime;
+            lblIQueryableLoading.Visibility = System.Windows.Visibility.Collapsed;
         }
     }
 }

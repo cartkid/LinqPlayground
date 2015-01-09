@@ -3,51 +3,121 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="550" Width="700">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Button Name="executeAllNamesCount" Click="executeAllNamesCount_Click" Content="All Names Count" Grid.Row="0" Grid.Column="0"/>
-            <Button Name="executeEricNameCount" Click="executeEricNameCount_Click" Content="Eric Name Count" Grid.Row="0" Grid.Column="1"/>
-            <Button Name="executeAlyssaNamesCount" Click="executeAlyssaNamesCount_Click" Content="Alyssa Name Count" Grid.Row="0" Grid.Column="2"/>
-            <Button Name="executeGetPeopleAndPay" Click="executeGetPeopleAndPay_Click" Content="Get People And Pay" Grid.Row="1" Grid.Column="0"/>
-            <Button Name="executeGetFirstNameCounts" Click="executeGetFirstNameCounts_Click" Content="Get FirstName Counts" Grid.Row="1" Grid.Column="1"/>
-            <Button Name="executeGetFullNameCounts" Click="executeGetFullNameCounts_Click" Content="Get Full Name Counts" Grid.Row="1" Grid.Column="2"/>
-            <Button Name="executeGetName" Click="executeGetName_Click" Content="Get Specified Name" Grid.Row="2" Grid.Column="0"/>
-        </Grid>
-        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Label Content="First Name:" Grid.Row="0" Grid.Column="0"/>
-            <TextBox Name="tbFirstName" Grid.Row="0" Grid.Column="1"/>
-            <Label Content="Number of Records to Get:" Grid.Row="1" Grid.Column="0"/>
-            <TextBox Name="tbNumRecords" Grid.Row="1" Grid.Column="1"/>
-        </Grid>
-        <DataGrid Grid.Row="2" Grid.Column="0" Name="dataGrid" Grid.ColumnSpan="2"/>
-        <Label Content="Number of Records: " Grid.Row="3" Grid.Column="0"/>
-        <Label Name="lblNumberOfRecords" Grid.Row="3" Grid.Column="1"/>
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <Label Content="Queries"/>
+                </TabItem.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Button Name="executeAllNamesCount" Click="executeAllNamesCount_Click" Content="All Names Count" Grid.Row="0" Grid.Column="0"/>
+                        <Button Name="executeEricNameCount" Click="executeEricNameCount_Click" Content="Eric Name Count" Grid.Row="0" Grid.Column="1"/>
+                        <Button Name="executeAlyssaNamesCount" Click="executeAlyssaNamesCount_Click" Content="Alyssa Name Count" Grid.Row="0" Grid.Column="2"/>
+                        <Button Name="executeGetPeopleAndPay" Click="executeGetPeopleAndPay_Click" Content="Get People And Pay" Grid.Row="1" Grid.Column="0"/>
+                        <Button Name="executeGetFirstNameCounts" Click="executeGetFirstNameCounts_Click" Content="Get FirstName Counts" Grid.Row="1" Grid.Column="1"/>
+                        <Button Name="executeGetFullNameCounts" Click="executeGetFullNameCounts_Click" Content="Get Full Name Counts" Grid.Row="1" Grid.Column="2"/>
+                        <Button Name="executeGetName" Click="executeGetName_Click" Content="Get Specified Name" Grid.Row="2" Grid.Column="0"/>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="First Name:" Grid.Row="0" Grid.Column="0"/>
+                        <TextBox Name="tbFirstName" Grid.Row="0" Grid.Column="1"/>
+                        <Label Content="Number of Records to Get:" Grid.Row="1" Grid.Column="0"/>
+                        <TextBox Name="tbNumRecords" Grid.Row="1" Grid.Column="1"/>
+                    </Grid>
+                    <DataGrid Grid.Row="2" Grid.Column="0" Name="dataGrid" Grid.ColumnSpan="2"/>
+                    <Label Content="Number of Records: " Grid.Row="3" Grid.Column="0"/>
+                    <Label Name="lblNumberOfRecords" Grid.Row="3" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Label Content="IEnumerable Queries"/>
+                </TabItem.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Execute Queries" Name="btnIEnumerableExecuteQueries" Click="btnIEnumerableExecuteQueries_Click" Grid.Row="0" Grid.Column="0"/>
+                        <Label Name="lblIEnumerableLoading" Visibility="Collapsed" Grid.Row="0" Grid.Column="1"/>
+                    </Grid>
+                    <DataGrid Grid.Row="1" Grid.Column="0" Name="dgIEnumerable" Grid.ColumnSpan="2"/>
+                    <Label Content="Execution Milliseconds: " Grid.Row="2" Grid.Column="0"/>
+                    <Label Name="lblIEnumerableExecutionTime" Grid.Row="2" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Label Content="IQueryable Queries"/>
+                </TabItem.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Execute Queries" Name="btnIQueryableExecuteQueries" Click="btnIQueryableExecuteQueries_Click" Grid.Row="0" Grid.Column="0"/>
+                        <Label Name="lblIQueryableLoading" Visibility="Collapsed" Grid.Row="0" Grid.Column="1"/>
+                    </Grid>
+                    <DataGrid Grid.Row="1" Grid.Column="0" Name="dgIQueryable" Grid.ColumnSpan="2"/>
+                    <Label Content="Execution Milliseconds: " Grid.Row="2" Grid.Column="0"/>
+                    <Label Name="lblIQueryableExecutionTime" Grid.Row="2" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
+
 </Window>
