@@ -59,6 +59,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ExtensionMethodsTests.cs" />
     <Compile Include="IEnumerableVsIQueryableTests.cs" />
     <Compile Include="AdventureWorksTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

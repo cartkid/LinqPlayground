@@ -59,7 +59,7 @@
             </TabItem>
             <TabItem>
                 <TabItem.Header>
-                    <Label Content="IEnumerable Queries"/>
+                    <Label Content="Extension Methods"/>
                 </TabItem.Header>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -74,47 +74,21 @@
                     <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Button Content="Execute Queries" Name="btnIEnumerableExecuteQueries" Click="btnIEnumerableExecuteQueries_Click" Grid.Row="0" Grid.Column="0"/>
-                        <Label Name="lblIEnumerableLoading" Visibility="Collapsed" Grid.Row="0" Grid.Column="1"/>
-                    </Grid>
-                    <DataGrid Grid.Row="1" Grid.Column="0" Name="dgIEnumerable" Grid.ColumnSpan="2"/>
-                    <Label Content="Execution Milliseconds: " Grid.Row="2" Grid.Column="0"/>
-                    <Label Name="lblIEnumerableExecutionTime" Grid.Row="2" Grid.Column="1"/>
-                </Grid>
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <Label Content="IQueryable Queries"/>
-                </TabItem.Header>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <Button Content="Execute Queries" Name="btnIQueryableExecuteQueries" Click="btnIQueryableExecuteQueries_Click" Grid.Row="0" Grid.Column="0"/>
-                        <Label Name="lblIQueryableLoading" Visibility="Collapsed" Grid.Row="0" Grid.Column="1"/>
+                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                            <Label Content="Birth Month Int:"/>
+                            <TextBox Name="tbBirthMonthInt" Width="50px"/>
+                        </StackPanel>
+                        <Button Content="GetEmployeesByBirthMonth" Name="btnExecuteGetEmployeesByBirthMonth" Click="btnExecuteGetEmployeesByBirthMonth_Click" Grid.Row="1" Grid.Column="0"/>
+                        <Button Content="Execute GroupBySum" Name="btnGroupBySumQuery" Click="btnGroupBySumQuery_Click" Grid.Row="2" Grid.Column="0"/>
                     </Grid>
-                    <DataGrid Grid.Row="1" Grid.Column="0" Name="dgIQueryable" Grid.ColumnSpan="2"/>
-                    <Label Content="Execution Milliseconds: " Grid.Row="2" Grid.Column="0"/>
-                    <Label Name="lblIQueryableExecutionTime" Grid.Row="2" Grid.Column="1"/>
+                    <DataGrid Grid.Row="1" Grid.Column="0" Name="dgIExtensionMethods" Grid.ColumnSpan="2"/>
                 </Grid>
             </TabItem>
         </TabControl>

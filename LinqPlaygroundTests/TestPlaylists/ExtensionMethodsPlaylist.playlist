@@ -1,0 +1,8 @@
+<Playlist Version="1.0">
+	<Add Test="LinqPlaygroundTests.ExtensionMethodsTests.LambdaAndLinqSyntaxGroupAreEqual" />
+	<Add Test="LinqPlaygroundTests.ExtensionMethodsTests.GetEmployeesByBirthMonth1" />
+	<Add Test="LinqPlaygroundTests.ExtensionMethodsTests.GetEmployeesByBirthMonth2" />
+	<Add Test="LinqPlaygroundTests.ExtensionMethodsTests.GetEmployeesByBirthMonth3" />
+	<Add Test="LinqPlaygroundTests.ExtensionMethodsTests.GetGroupedOrdersLambdaSyntax" />
+	<Add Test="LinqPlaygroundTests.ExtensionMethodsTests.GetGroupedOrdersLinqSyntax" />
+</Playlist>

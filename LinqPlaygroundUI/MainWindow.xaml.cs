@@ -45,34 +45,19 @@ namespace LinqPlaygroundUI
             ((MainWindow)d).dataGrid.ItemsSource = (IEnumerable<object>)e.NewValue;
         }
 
-        public IEnumerable<object> IEnumerableSourceData
+        public IEnumerable<object> ExtensionMethodsSourceData
         {
-            get { return (IEnumerable<object>)GetValue(IEnumerableSourceDataProperty); }
-            set { SetValue(IEnumerableSourceDataProperty, value); }
+            get { return (IEnumerable<object>)GetValue(ExtensionMethodsSourceDataProperty); }
+            set { SetValue(ExtensionMethodsSourceDataProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for SourceData.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty IEnumerableSourceDataProperty =
-            DependencyProperty.Register("IEnumerableSourceData", typeof(IEnumerable<object>), typeof(MainWindow), new PropertyMetadata(new List<object>(), OnIEnumerableSourceDataPropertyChanged));
+        public static readonly DependencyProperty ExtensionMethodsSourceDataProperty =
+            DependencyProperty.Register("ExtensionMethodsSourceData", typeof(IEnumerable<object>), typeof(MainWindow), new PropertyMetadata(new List<object>(), OnExtensionMethodsSourceDataPropertyChanged));
 
-        private static void OnIEnumerableSourceDataPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnExtensionMethodsSourceDataPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            ((MainWindow)d).dgIEnumerable.ItemsSource = (IEnumerable<object>)e.NewValue;
-        }
-
-        public IEnumerable<object> IQueryableSourceData
-        {
-            get { return (IEnumerable<object>)GetValue(IQueryableSourceDataProperty); }
-            set { SetValue(IQueryableSourceDataProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for SourceData.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty IQueryableSourceDataProperty =
-            DependencyProperty.Register("IQueryableSourceData", typeof(IEnumerable<object>), typeof(MainWindow), new PropertyMetadata(new List<object>(), OnIQueryableSourceDataPropertyChanged));
-
-        private static void OnIQueryableSourceDataPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            ((MainWindow)d).dgIQueryable.ItemsSource = (IEnumerable<object>)e.NewValue;
+            ((MainWindow)d).dgIExtensionMethods.ItemsSource = (IEnumerable<object>)e.NewValue;
         }
 
         private void executeAllNamesCount_Click(object sender, RoutedEventArgs e)
@@ -137,22 +122,16 @@ namespace LinqPlaygroundUI
             lblNumberOfRecords.Content = SourceData.Count();
         }
 
-        private void btnIEnumerableExecuteQueries_Click(object sender, RoutedEventArgs e)
+        private void btnExecuteGetEmployeesByBirthMonth_Click(object sender, RoutedEventArgs e)
         {
-            lblIEnumerableLoading.Visibility = System.Windows.Visibility.Visible;
-            long totalExecutionTime = 0L;
-            IEnumerableSourceData = LinqPlayground.IEnumerableQueries.GetIEnumerableExecutionResults(out totalExecutionTime);
-            lblIEnumerableExecutionTime.Content = totalExecutionTime;
-            lblIEnumerableLoading.Visibility = System.Windows.Visibility.Collapsed;
+            int month = 1;
+            int.TryParse(tbBirthMonthInt.Text, out month);
+            ExtensionMethodsSourceData = LinqPlayground.ExtensionMethods.GetEmployeesByMonth(month);
         }
 
-        private void btnIQueryableExecuteQueries_Click(object sender, RoutedEventArgs e)
+        private void btnGroupBySumQuery_Click(object sender, RoutedEventArgs e)
         {
-            lblIQueryableLoading.Visibility = System.Windows.Visibility.Visible;
-            long totalExecutionTime = 0L;
-            IQueryableSourceData = LinqPlayground.IQueryableQueries.GetIQueryableExecutionResults(out totalExecutionTime);
-            lblIQueryableExecutionTime.Content = totalExecutionTime;
-            lblIQueryableLoading.Visibility = System.Windows.Visibility.Collapsed;
+            ExtensionMethodsSourceData = LinqPlayground.ExtensionMethods.ExecuteGroupBySumQuery();
         }
     }
 }

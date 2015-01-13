@@ -1,0 +1,12 @@
+<Playlist Version="1.0">
+	<Add Test="LinqPlaygroundTests.IEnumerableVsIQueryableTests.IEnumerableGetPeopleWholeRecord1" />
+	<Add Test="LinqPlaygroundTests.IEnumerableVsIQueryableTests.IEnumerableGetPeopleWholeRecord2" />
+	<Add Test="LinqPlaygroundTests.IEnumerableVsIQueryableTests.IEnumerableGetPeopleWholeRecord3" />
+	<Add Test="LinqPlaygroundTests.IEnumerableVsIQueryableTests.IEnumerableGetPeopleWholeRecord4" />
+	<Add Test="LinqPlaygroundTests.IEnumerableVsIQueryableTests.IEnumerableGetPeopleWholeRecord5" />
+	<Add Test="LinqPlaygroundTests.IEnumerableVsIQueryableTests.IQueryableGetPeopleWholeRecord1" />
+	<Add Test="LinqPlaygroundTests.IEnumerableVsIQueryableTests.IQueryableGetPeopleWholeRecord2" />
+	<Add Test="LinqPlaygroundTests.IEnumerableVsIQueryableTests.IQueryableGetPeopleWholeRecord3" />
+	<Add Test="LinqPlaygroundTests.IEnumerableVsIQueryableTests.IQueryableGetPeopleWholeRecord4" />
+	<Add Test="LinqPlaygroundTests.IEnumerableVsIQueryableTests.IQueryableGetPeopleWholeRecord5" />
+</Playlist>
